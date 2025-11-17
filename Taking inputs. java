@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class InputExample {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        
+        System.out.print("Pangalan: ");
+        String name = input.nextLine();
+
+        
+        System.out.print("Age mo: ");
+        int age = input.nextInt();
+
+        
+        System.out.print("Grades mo: ");
+        double grade = input.nextDouble();
+
+        
+        System.out.println("\n--- Output ---");
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Grade: " + grade);
+
+        input.close();
+    }
+}
