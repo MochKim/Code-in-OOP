@@ -1,0 +1,11 @@
+public class ArrayForEach {
+    public static void main(String[] args) {
+
+        String[] fruits = {"Apple", "Banana", "Mango", "Orange"};
+
+        System.out.println("Fruits:");
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+    }
+}
