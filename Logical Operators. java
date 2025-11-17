@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class LogicalOperatorsExample {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = input.nextInt();
+
+        
+        if (number > 0 && number < 100) {
+            System.out.println("The number is between 1 and 99.");
+        }
+
+        
+        if (number < 0 || number > 200) {
+            System.out.println("The number is OUTSIDE the range 0–100.");
+        }
+
+        
+        boolean isEven = (number % 2 == 0);
+        if (!isEven) {
+            System.out.println("The number is odd.");
+        } else {
+            System.out.println("The number is even.");
+        }
+
+        input.close();
+    }
+}
