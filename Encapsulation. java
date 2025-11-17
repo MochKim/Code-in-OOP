@@ -1,0 +1,47 @@
+public class Main {
+    public static void main(String[] args) {
+
+        BankAccount account = new BankAccount(100);
+
+        account.deposit(50);
+        account.withdraw(30);
+
+        System.out.println("Current balance: " + account.getBalance());
+    }
+}
+
+class BankAccount {
+
+    
+    private double balance;
+
+    
+    public BankAccount(double balance) {
+        this.balance = balance;
+    }
+
+    
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposited: " + amount);
+        } else {
+            System.out.println("Deposit amount must be positive.");
+        }
+    }
+
+    
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            System.out.println("Withdraw: " + amount);
+        } else {
+            System.out.println("Not enough balance or invalid amount.");
+        }
+    }
+
+    
+    public double getBalance() {
+        return balance;
+    }
+}
