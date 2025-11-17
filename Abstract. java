@@ -1,0 +1,42 @@
+abstract class Car {
+    String brand = "Bugatti Chiron";
+
+    abstract void startEngine();
+    abstract void stopEngine();
+
+    void showBrand() {
+        System.out.println("Car Brand: " + brand);
+    }
+}
+
+
+class BugattiChiron extends Car {
+
+    @Override
+    void startEngine() {
+        System.out.println("Bugatti Chiron engine roars to life with push button start!");
+    }
+
+    @Override
+    void stopEngine() {
+        System.out.println("Bugatti Chiron engine stop using break");
+    }
+
+    void showModel() {
+        System.out.println("Model: Bugatti Chiron 2024");
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        Car myCar = new BugattiChiron();
+
+        myCar.showBrand();
+        myCar.startEngine();
+        myCar.stopEngine();
+
+        
+        ((BugattiChiron) myCar).showModel();
+    }
+}
